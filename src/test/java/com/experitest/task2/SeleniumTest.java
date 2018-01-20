@@ -80,6 +80,7 @@ public class SeleniumTest
 	
 	@AfterTest
 	public void TearDown(){
+		driver.quit();
 		
 	} 
 	
