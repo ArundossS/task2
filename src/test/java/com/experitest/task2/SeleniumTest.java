@@ -54,7 +54,7 @@ public class SeleniumTest
 		
 		dc.setCapability("accessKey", "eyJ4cC51IjoxMDcsInhwLnAiOjIsInhwLm0iOiJNVFV4TlRNMU16RTNOelUwTVEiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE4MzE1NjcwNDgsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.Lc09vFOq15vCaxzu5fr140-GuC0mBT3BnpSlpGZxYBk");
 		dc.setCapability("generateReport", true);
-		dc.setCapability("testName", "DemoForDeepali");
+		dc.setCapability("testName", "Task2_selenium");
 		dc.setCapability("newSessionWaitTimeout", 90);		
 		dc.setCapability("newCommandTimeout", 120);
 		
