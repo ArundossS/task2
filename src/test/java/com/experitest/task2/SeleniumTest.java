@@ -3,6 +3,7 @@ package com.experitest.task2;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
@@ -52,9 +53,9 @@ public class SeleniumTest
 		}
 		
 		
-		dc.setCapability("accessKey", "eyJ4cC51IjoxMDcsInhwLnAiOjIsInhwLm0iOiJNVFV4TlRNMU16RTNOelUwTVEiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE4MzE1NjcwNDgsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.Lc09vFOq15vCaxzu5fr140-GuC0mBT3BnpSlpGZxYBk");
+		dc.setCapability("accessKey", "eyJ4cC51Ijo4NiwieHAucCI6MiwieHAubSI6Ik1BIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4MzI2MDQ3NzksImlzcyI6ImNvbS5leHBlcml0ZXN0In0.jQiiUT4kDAy1p4UKYY-tUSA289P6yqr5Fz1lou9ckrM");
 		dc.setCapability("generateReport", true);
-		dc.setCapability("testName", "Task2_selenium");
+		dc.setCapability("testName", "ATB");
 		dc.setCapability("newSessionWaitTimeout", 90);		
 		dc.setCapability("newCommandTimeout", 120);
 		
@@ -65,8 +66,11 @@ public class SeleniumTest
 	
 	
 	@Test
-	public void ActualTest(){
-		driver.get("https://www.facebook.com");
+	public void ActualTest() throws InterruptedException{
+		driver.get("https://www.atb.com");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@text='Online ']")).click();
+        driver.findElement(By.xpath("//*[@nodeName='A' and @width>0 and ./*[@text='ATB ONLINE']]")).click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
