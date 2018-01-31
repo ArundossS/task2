@@ -69,7 +69,8 @@ public class SeleniumTest
 	public void ActualTest() throws InterruptedException{
 		driver.get("https://www.atb.com");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//*[@text='Online ']")).click();
+		System.out.println(driver.getTitle());
+        driver.findElement(By.xpath("//*[@class='online_signin_btn']")).click();
         driver.findElement(By.xpath("//*[@nodeName='A' and @width>0 and ./*[@text='ATB ONLINE']]")).click();
 		try {
 			Thread.sleep(5000);
@@ -77,7 +78,7 @@ public class SeleniumTest
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(driver.getTitle());
+
 		
 	} 
 	
